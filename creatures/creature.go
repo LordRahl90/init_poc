@@ -5,7 +5,7 @@ import (
 	"trial_test/randomness"
 )
 
-var creatures = []string{"hello", "world"}
+var creatures = []string{"ape", "lion", "panda", "leopard", "bear"}
 
 func init() {
 	fmt.Println("Creature method init is here")
@@ -14,7 +14,6 @@ func init() {
 //GiveRandom - Test the randomness
 func GiveRandom() (creature string) {
 	i := randomness.GiveRandNum(len(creatures))
-	fmt.Printf("I is: %d\n", i)
-	creature = "hello"
+	creature = creatures[i]
 	return
 }

@@ -3,9 +3,11 @@ package randomness
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func init() {
+	rand.Seed(time.Now().Local().UnixNano())
 	fmt.Println("Random Init is started here")
 }
 
